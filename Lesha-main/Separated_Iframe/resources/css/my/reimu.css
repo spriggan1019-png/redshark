@@ -1,0 +1,168 @@
+/*
+	# 프로젝트명 : 수원시청 홈페이지
+	# 파일설명 : 2025 고1 미래유망유망분야 고졸인력양성과정 PBL
+	# 파일버전 : 1.2.0
+	# 생성일 : 2025.12.11
+	# 생성자 : 조영서
+	# 수정일 : 2025-12-13
+	# 수정자 : 조영서
+	# 작업내용 : 문서 환경설정 복습 적용
+*/
+
+/* 1. 슬라이드 외부 감싸는 영역 */
+.Slide-siez-wrapper {
+    max-width: 1100px;
+    margin: 3rem auto 30px;
+    position: relative;
+    display: block;
+}
+
+/* 2. 메인 슬라이드 박스 (테두리 및 라운드) */
+.Slide-siez {
+    width: 100%;
+    height: 450px;
+    /* 높이 고정 */
+    overflow: hidden;
+    position: relative;
+    border-radius: 24px;
+    /* 이미지처럼 둥글게 */
+    border: 3px solid #E2EEFF;
+    /* 이미지 톤의 연한 하늘색 테두리 */
+    background-color: #F0F7FF;
+    /* 배경색 */
+    box-shadow: 0 10px 30px rgba(0, 71, 187, 0.05);
+}
+
+/* 3. 개별 슬라이드 아이템 */
+.Slide-siez .carousel-item {
+    height: 450px;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* 4. 이미지 설정 (양옆 흰색 없이 꽉 채우기) */
+.Slide-siez .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 비율 유지하며 꽉 채움 */
+    display: block;
+}
+
+/* 5. 텍스트 위치 (중앙 왼쪽 배치 및 배경 제거) */
+.Slide-siez .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    /* 왼쪽에서 적당히 떨어짐 */
+    transform: translateY(-50%);
+    /* 세로 정중앙 */
+    width: auto;
+    max-width: 60%;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    background: none !important;
+    /* 뿌연 배경 제거 */
+    backdrop-filter: none !important;
+    /* 블러 효과 제거 */
+    z-index: 5;
+}
+
+/* 6. 텍스트 상세 스타일 */
+.Slide-siez .carousel-caption h5 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1A2F52 !important;
+    /* 이미지의 진한 네이비색 */
+    margin-bottom: 12px;
+    text-shadow: none;
+}
+
+.Slide-siez .carousel-caption p {
+    font-size: 1.2rem;
+    color: #4A5568 !important;
+    font-weight: 500;
+    text-shadow: none;
+    margin: 0;
+}
+
+/* 7. 상단 뱃지 스타일 (행사 및 축제) */
+.card-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* 진한 블루 */
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    z-index: 10;
+}
+
+/* 8. 화살표 컨트롤러 (보이게 수정) */
+.Slide-siez .carousel-control-prev,
+.Slide-siez .carousel-control-next {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    opacity: 0.7;
+}
+
+.Slide-siez .carousel-control-prev:hover,
+.Slide-siez .carousel-control-next:hover {
+    opacity: 1;
+}
+
+/* 9. 네이비색 화살표 아이콘 직접 그리기 */
+.Slide-siez .carousel-control-prev-icon,
+.Slide-siez .carousel-control-next-icon {
+    background-image: none;
+    /* 기본 흰색 아이콘 제거 */
+    width: 30px;
+    height: 30px;
+    border-left: 4px solid #0047BB;
+    border-bottom: 4px solid #0047BB;
+}
+
+.Slide-siez .carousel-control-prev-icon {
+    transform: rotate(45deg);
+    margin-left: 15px;
+}
+
+.Slide-siez .carousel-control-next-icon {
+    transform: rotate(-135deg);
+    margin-right: 15px;
+}
+
+/* 10. 하단 인디케이터 (점) */
+.Slide-siez .carousel-indicators [data-bs-target] {
+    background-color: #0047BB;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* 행사 및 축제 배지 이미지 크기 및 모양 조절 */
+.card-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+    background: none !important;
+}
+
+.card-badge img {
+    max-width: 120px;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 16px;
+    /* 네 꼭지점만 둥글게 */
+    background: none !important;
+    padding: 0;
+}
